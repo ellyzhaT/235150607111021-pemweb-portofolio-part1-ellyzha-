@@ -1,0 +1,87 @@
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .about-content, .skills-container {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 768px) {
+        .portfolio-grid {
+            grid-template-columns: 1fr; 
+        }
+        
+        .about-images {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .hobby-pic {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .container::before,
+    .container::after {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .container::before,
+    .container::after {
+        font-size: 14px;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
